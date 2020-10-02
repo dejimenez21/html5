@@ -8,9 +8,33 @@
 </head>
 
 <body>
+    <img itemscope itemprop="photo"  itemtype="https://schema.org/ImageObject" src="imgs/WELCOME-ST-IVES.jpg" alt="Welcome" id="img">
+
+    <div itemscope itemtype="http://schema.org/SoftwareApplication">
+        <span itemprop="name">Angry Birds</span> -
+      
+        REQUIRES <span itemprop="operatingSystem">ANDROID</span><br>
+        <link itemprop="applicationCategory" href="http://schema.org/GameApplication"/>
+      
+        <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+          RATING:
+          <span itemprop="ratingValue">4.6</span> (
+          <span itemprop="ratingCount">8864</span> ratings )
+        </div>
+      
+        <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+          Price: $<span itemprop="price">1.00</span>
+          <meta itemprop="priceCurrency" content="USD" />
+        </div>
+      </div>
+
+
     <header>
-        <input type="search" name="search" id="search">
+        <input type="search" name="search" placeholder="Search..." id="search">
     </header>
+
+    
+
     <form action="https://localhost:5001">
 
         <p>Name</p>
@@ -22,11 +46,13 @@
         <p>Tel</p>
         <input type="tel" name="tel" id="tel" required>
 
-        <p>password</p>
+        <p>Password</p>
         <input type="password" name="pass" id="pass" required>
 
-        <p>favorite color</p>
+        <p>Favorite color</p>
         <input type="color" name="color" id="color">
+
+        <div class="clearfix"></div>
 
         <input type="submit" value="Submit">
     </form>
@@ -46,6 +72,27 @@
             });
         }
     </script>
+
+    <style>
+        *{
+            text-align: center;
+        }
+        p{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: bold;
+        }
+        
+        .clearfix{
+            clear: both;
+            display: block;
+        }
+
+
+        #img{
+            width: 300px;
+            height: 200px;
+        }
+    </style>
 
 
 </body>
